@@ -1,0 +1,65 @@
+model:
+  base_learning_rate: 4.5e-6
+  target: taming.models.vqgan_ref.VQModel_Ref
+  params:
+    checkpoint_encoder: logs/vqgan_landscape_f16_1024.ckpt
+    checkpoint_decoder: logs/vqgan_wikiart_f16_1024.ckpt
+    embed_dim: 256
+    n_embed: 1024
+    ddconfig:
+      double_z: False
+      z_channels: 256
+      resolution: 256
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult: [1,1,2,2,4]  # num_down = len(ch_mult)-1
+      num_res_blocks: 2
+      attn_resolutions: [16]
+      dropout: 0.0
+    lossconfig:
+      target: taming.modules.losses.vqperceptual_ref.VQLPIPS_Ref
+      params:
+        disc_ndf: 64
+        disc_num_layers: 0
+        disc_conditional: False
+        disc_in_channels: 256
+        disc_start: 0
+        disc_weight: 1.0
+        disc_factor: 0.8
+        codebook1_weight: 1.0
+        codebook2_weight: 1.0
+        reverse_weight: 1.0
+        style_weight: 10.0
+        G_step: 1
+
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 8
+    num_workers: 8
+    train:
+      target: taming.data.unpaired_image.UnpairedImageTrain
+      params:
+        folder2: datasets/painter-by-numbers/train
+        folder1: datasets/lhq_1024_jpg/lhq_1024_jpg
+        wikiart_info2: datasets/painter-by-numbers/train_info.csv
+        wikiart_key2: landscape
+        size: 256
+    validation:
+      target: taming.data.unpaired_image.UnpairedImageVal
+      params:
+        folder2: datasets/painter-by-numbers/train
+        folder1: datasets/lhq_1024_jpg/lhq_1024_jpg
+        wikiart_info2: datasets/painter-by-numbers/train_info.csv
+        wikiart_key2: landscape
+        size: 256
+    test:
+      target: taming.data.unpaired_image.UnpairedImageTest
+      params:
+        folder2: datasets/painter-by-numbers/train
+        folder1: datasets/lhq_1024_jpg/lhq_1024_jpg
+        wikiart_info2: datasets/painter-by-numbers/train_info.csv
+        wikiart_key2: landscape
+        size: 256
+
