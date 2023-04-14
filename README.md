@@ -38,13 +38,13 @@ conda activate quantart
 
 | Task | Pre-trained Model | Content | Style |
 | ---- | ---- | ---- | ---- |
-| photo-->artwork| [coco2art](https://drive.google.com/drive/folders/13-z3eowPsPjKTIULP5sBrr_jgJn3w7ZH?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | 
-| landscape$\rightarrow$artwork | [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) |[WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
-| landscape$\rightarrow$artwork (non-VQ) | [landscape2art_continuous](https://drive.google.com/drive/folders/1s-N62W8l_1iOvydsWvmJTWxNwWWJKTum?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
-| face$\rightarrow$artwork | [face2art](https://drive.google.com/drive/folders/1wKWmmtLChtXTWFaaun097H7lYJ6-IWTe?usp=share_link) | [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [Metfaces](https://github.com/NVlabs/metfaces-dataset) |
-| artwork$\rightarrow$artwork | [art2art](https://drive.google.com/drive/folders/1J48c21bN5f9anGBUSALcEMO0Bj8Emd0s?usp=share_link) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
-| photo$\rightarrow$photo | [coco2coco](https://drive.google.com/drive/folders/1xc5P1woZJSoemcVvjnZ4Gj5Jyam7RsQZ?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [MS_COCO](https://cocodataset.org/#download) |
-| landscape$\rightarrow$landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
+| photo->artwork| [coco2art](https://drive.google.com/drive/folders/13-z3eowPsPjKTIULP5sBrr_jgJn3w7ZH?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | 
+| landscape->artwork | [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) |[WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
+| landscape->artwork (non-VQ) | [landscape2art_continuous](https://drive.google.com/drive/folders/1s-N62W8l_1iOvydsWvmJTWxNwWWJKTum?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
+| face->artwork | [face2art](https://drive.google.com/drive/folders/1wKWmmtLChtXTWFaaun097H7lYJ6-IWTe?usp=share_link) | [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [Metfaces](https://github.com/NVlabs/metfaces-dataset) |
+| artwork->artwork | [art2art](https://drive.google.com/drive/folders/1J48c21bN5f9anGBUSALcEMO0Bj8Emd0s?usp=share_link) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
+| photo->photo | [coco2coco](https://drive.google.com/drive/folders/1xc5P1woZJSoemcVvjnZ4Gj5Jyam7RsQZ?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [MS_COCO](https://cocodataset.org/#download) |
+| landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
 ## Quick Start
 1. To test the landscape-to-artwork style transfer performance, please download the [LandscapesHQ](https://disk.yandex.ru/d/Sz1gPiMoUregEQ) and [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) datasets and put them under `./datasets/`. 
