@@ -5,7 +5,7 @@ Official PyTorch implementation of the paper:
 [Siyu Huang<sup>*</sup>](https://siyuhuang.github.io), [Jie An<sup>*</sup>](https://www.cs.rochester.edu/u/jan6/), [Donglai Wei](https://donglaiw.github.io/), [Jiebo Luo](https://www.cs.rochester.edu/u/jluo/), [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister)  
 CVPR 2023
 
-We devise a new style transfer framework called QuantArt for high visual-fidelity generation for various style transfer tasks. QuantArt pushes the latent representation of the generated artwork toward the centroids of the real artwork distribution with vector quantization.
+We devise a new style transfer framework called QuantArt for high visual-fidelity stylization. The core idea is pushing the latent representation of the generated artwork toward the centroids of the real artwork distribution with vector quantization. QuantArt achieves decent performance for various image style transfer tasks.
 
 <p align='center'>
  <img alt='Thumbnail' src='imgs/thumb.png'>
