@@ -47,11 +47,12 @@ conda activate quantart
 | landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
 ## Quick Start
-1. To test the landscape-to-artwork style transfer performance, please download the [LandscapesHQ](https://disk.yandex.ru/d/Sz1gPiMoUregEQ) and [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) datasets and put them under `./datasets/`. 
+1. To test the landscape-to-artwork style transfer performance, please download the [LandscapesHQ](https://disk.yandex.ru/d/Sz1gPiMoUregEQ) and [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) datasets and put them under `datasets/`. 
 
-2. Download the pre-trained [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) model and put it under `./logs/`.  The folder structure should be:
+2. Download the pre-trained [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) model and put it under `logs/`.  The folder structure should be:
 
 ```
+QuantArt
 ├── configs
 ├── datasets
 │   ├── lhq_1024_jpg
@@ -86,18 +87,33 @@ conda activate quantart
 ```
 bash test.sh
 ```
-The landscape-to-artwork style transfer results will be saved in `./logs/`.
+The landscape-to-artwork style transfer results will be saved in `logs/`.
 
-## Training
-Run `bash train.sh` or the following command to train a photo-to-artwork model
+## Testing
+Please follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. For example, run the following command to test the photo-to-artwork style transfer model:
 ```
-python -u main.py --base configs/landscape2art.yaml -t True --gpus 0,
+python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
 ```
 
 * `--base`: path for the config file.
+* `-n`: name of result folder under `logs/`.
 * `-t`: is training.
+* `--gpus`: GPUs used.
 
-More training configs can be found in `./configs`
+## Training
+**Stage-1:** Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook):
+```
+python -u main.py --base configs/vqgan_wikiart.yaml 
+```
+
+Please note that you have to train two Stage-1 models for content and style datasets, respectively.
+
+**Stage-2:** Run `bash train.sh` or the following command to train a photo-to-artwork model
+```
+python -u main.py --base configs/coco2art.yaml -t True --gpus 0,
+```
+
+More training configs of Stage-2 models can be found in `configs/`
 
 ## Citation
 ```
