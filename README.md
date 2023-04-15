@@ -90,23 +90,23 @@ bash test.sh
 The landscape-to-artwork style transfer results will be saved in `logs/`.
 
 ## Testing
-Please follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. For example, run the following command to test the photo-to-artwork style transfer model:
+Follow above **Datasets and Pre-trained Models** to download more datasets and pretrained models. For example, run the following command to test photo-to-artwork style transfer model:
 ```
 python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
 ```
 
 * `--base`: path for the config file.
-* `-n`: name of result folder under `logs/`.
+* `-n`: result folder under `logs/`.
 * `-t`: is training.
 * `--gpus`: GPUs used.
 
 ## Training
-**Stage-1:** Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook):
+**Stage-1:** Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
 ```
-python -u main.py --base configs/vqgan_wikiart.yaml 
+python -u main.py --base configs/vqgan_wikiart.yaml -t True --gpus 0,1,2,3
 ```
 
-Please note that you have to train two Stage-1 models for content and style datasets, respectively.
+Two separate Stage-1 models are required for content and style datasets, respectively.
 
 **Stage-2:** Run `bash train.sh` or the following command to train a photo-to-artwork model
 ```
