@@ -113,7 +113,7 @@ Two separate Stage-1 models are required for content and style datasets, respect
 python -u main.py --base configs/coco2art.yaml -t True --gpus 0,
 ```
 
-More training configs of Stage-2 models can be found in `configs/`
+More training configs of Stage-2 models can be found in `configs/`.
 
 ## Citation
 ```
@@ -127,7 +127,7 @@ More training configs of Stage-2 models can be found in `configs/`
 ```
 
 ## Acknowledgement
-This repository is heavily built upon [VQGAN](https://github.com/CompVis/taming-transformers).
+This repository is heavily built upon the amazing [VQGAN](https://github.com/CompVis/taming-transformers).
 
 ## Contact
 If you have any questions, please do not hesitate to contact <huangsiyutc@gmail.com>.
