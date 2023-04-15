@@ -36,8 +36,8 @@ conda activate quantart
 
 **Stage-2:** The datasets and pre-trained models for style transfer experiments in this repository are as follows:
 
-| Task | Pre-trained Model | Content | Style |
-| ---- | ---- | ---- | ---- |
+| Task | Pre-trained Model | Content | Style | Style |
+| ---- | ---- | ---- | ---- | ---- |
 | photo->artwork| [coco2art](https://drive.google.com/drive/folders/13-z3eowPsPjKTIULP5sBrr_jgJn3w7ZH?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | 
 | landscape->artwork | [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) |[WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
 | landscape->artwork (non-VQ) | [landscape2art_continuous](https://drive.google.com/drive/folders/1s-N62W8l_1iOvydsWvmJTWxNwWWJKTum?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
@@ -96,7 +96,6 @@ python -u main.py --base configs/landscape2art.yaml -t True --gpus 0,
 
 * `--base`: path for the config file.
 * `-t`: is training.
-
 
 ## Citation
 ```
