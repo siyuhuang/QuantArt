@@ -97,6 +97,8 @@ python -u main.py --base configs/landscape2art.yaml -t True --gpus 0,
 * `--base`: path for the config file.
 * `-t`: is training.
 
+More training configs can be found in `./configs`
+
 ## Citation
 ```
 @inproceedings{huang2023quantart,
