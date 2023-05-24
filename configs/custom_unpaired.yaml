@@ -2,8 +2,8 @@ model:
   base_learning_rate: 4.5e-6
   target: taming.models.vqgan_ref.VQModel_Ref
   params:
-    checkpoint_decoder: # logs/vqgan_wikiart_f16_1024.ckpt
-    checkpoint_encoder: # logs/vqgan_imagenet_f16_1024.ckpt
+    checkpoint_decoder: logs/vqgan_wikiart_f16_1024.ckpt # decoder checkpoint path
+    checkpoint_encoder: logs/vqgan_imagenet_f16_1024.ckpt # encoder checkpoint path
     embed_dim: 256
     n_embed: 1024
     use_residual: True
@@ -43,19 +43,19 @@ data:
     train:
       target: taming.data.unpaired_image.UnpairedImageTrain
       params:
-        folder2: # datasets/painter-by-numbers/train
-        folder1: # datasets/coco/train_img
+        folder2: datasets/painter-by-numbers/train # style data
+        folder1: datasets/coco/train_img # content data
         size: 256
     validation:
       target: taming.data.unpaired_image.UnpairedImageVal
       params:
-        folder2: # datasets/painter-by-numbers/test
-        folder1: # datasets/coco/val_img
+        folder2: datasets/painter-by-numbers/test # style data
+        folder1: datasets/coco/val_img # content data
         size: 256
     test:
       target: taming.data.unpaired_image.UnpairedImageTest
       params:
-        folder2: # datasets/painter-by-numbers/test
-        folder1: # datasets/coco/val_img
+        folder2: datasets/painter-by-numbers/test # style data
+        folder1: datasets/coco/val_img # content data
         size: 256
 
