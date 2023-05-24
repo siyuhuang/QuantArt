@@ -100,17 +100,6 @@ python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --
 * `-t`: is training.
 * `--gpus`: GPUs used.
 
-### Custom unpaired dataset
-Following comments in `configs/custom_unpaired.yaml' to specify model checkpoints and data paths. Then run
-```
-python -u main.py --base configs/custom_unpaired.yaml -n custom_unpaired -t False --gpus 0,
-```
-### Custom paired dataset
-The corresponding content and style images (in two folders) should have the same file names. Following comments in `configs/custom_paired.yaml' to specify model checkpoints and data paths. Then run
-```
-python -u main.py --base configs/custom_paired.yaml -n custom_paired -t False --gpus 0,
-```
-
 ## Training
 **Stage-1:** Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
 ```
@@ -125,6 +114,18 @@ python -u main.py --base configs/coco2art.yaml -t True --gpus 0,
 ```
 
 More training configs of Stage-2 models can be found in `configs/`.
+
+## Custom Dataset
+### Unpaired data
+To test unpaired data, follow comments in `configs/custom_unpaired.yaml' to specify model checkpoints and data paths. Then run
+```
+python -u main.py --base configs/custom_unpaired.yaml -n custom_unpaired -t False --gpus 0,
+```
+### Paired data
+To test paired data, the corresponding content and style images (in two folders) should have the same file names. Follow comments in `configs/custom_paired.yaml' to specify model checkpoints and data paths, then run
+```
+python -u main.py --base configs/custom_paired.yaml -n custom_paired -t False --gpus 0,
+```
 
 ## Citation
 ```
