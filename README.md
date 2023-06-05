@@ -54,7 +54,7 @@ Results will be saved in `logs/`.
 | landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
 ## Testing
-Follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. The folder structure of datasets and models should be
+Follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. For instance for photo-to-artwork style transfer model, the folder structure should be
 ```
 QuantArt
 ├── configs
@@ -87,9 +87,9 @@ QuantArt
 └── test.sh
 ```
 
-Run the following command to test the pre-trained photo-to-artwork style transfer model:
+Run the following command to test the pre-trained model on the testing dataset:
 ```
-python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
+python -u main.py --base logs/landscape2art/configs/test.yaml -n landscape2art -t False --gpus 0,
 ```
 
 * `--base`: path for the config file.
