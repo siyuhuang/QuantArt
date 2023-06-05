@@ -23,6 +23,13 @@ conda env create -f environment.yaml
 conda activate quantart
 ```
 
+## Quick Start
+Download the pre-trained [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) model and put it under `logs/`. Run
+```
+bash test.sh
+```
+Results will be saved in `logs/`.
+
 ## Datasets and Pre-trained Models
 **Stage-1:** The datasets and pre-trained models for codebook pretraining in this repository are as follows:
 
@@ -46,27 +53,8 @@ conda activate quantart
 | photo->photo | [coco2coco](https://drive.google.com/drive/folders/1xc5P1woZJSoemcVvjnZ4Gj5Jyam7RsQZ?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [MS_COCO](https://cocodataset.org/#download) |
 | landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
-## Quick Start
-Download the pre-trained [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) model and put it under `logs/`.
-
-Run the following command:
-```
-bash test.sh
-```
-The results will be saved in `logs/`.
-
 ## Testing
-To test the landscape-to-artwork style transfer performance, please download the [LandscapesHQ](https://disk.yandex.ru/d/Sz1gPiMoUregEQ) and [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) datasets and put them under `datasets/`. Follow above **Datasets and Pre-trained Models** to download more datasets and pretrained models. For example, run the following command to test photo-to-artwork style transfer model:
-```
-python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
-```
-
-* `--base`: path for the config file.
-* `-n`: result folder under `logs/`.
-* `-t`: is training.
-* `--gpus`: GPUs used.
-
-The folder structure should be
+Follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. The folder structure of datasets and models should be
 ```
 QuantArt
 ├── configs
@@ -98,6 +86,16 @@ QuantArt
 ├── train.sh
 └── test.sh
 ```
+
+Run the following command to test the pre-trained photo-to-artwork style transfer model:
+```
+python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
+```
+
+* `--base`: path for the config file.
+* `-n`: result folder under `logs/`.
+* `-t`: is training.
+* `--gpus`: GPUs used.
 
 
 ## Training
