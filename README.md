@@ -31,7 +31,7 @@ bash test.sh
 Results will be saved in `logs/`.
 
 ## Datasets and Pre-trained Models
-**Stage-1:** The datasets and pre-trained models for codebook pretraining in this repository are as follows:
+**Stage-1:** The datasets and pre-trained models for codebook pretraining are as follows:
 
 | Dataset | Pre-trained Model |
 | ---- | ---- |
@@ -41,7 +41,7 @@ Results will be saved in `logs/`.
 | [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [vqgan_faceshq_f16_1024.ckpt](https://drive.google.com/file/d/1_6ZW8iVhFentkG_HTn5pMj4JRAiPUHwY/view?usp=share_link) |
 | [Metfaces](https://github.com/NVlabs/metfaces-dataset) | [vqgan_metfaces_f16_1024.ckpt](https://drive.google.com/file/d/1omGG6TmSVsksk39pGPkyLVTa-K4FcxQd/view?usp=share_link) |
 
-**Stage-2:** The datasets and pre-trained models for style transfer experiments in this repository are as follows:
+**Stage-2:** The datasets and pre-trained models for style transfer experiments are as follows:
 
 | Task | Pre-trained Model | Content | Style |
 | ---- | ---- | ---- | ---- |
