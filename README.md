@@ -47,10 +47,26 @@ conda activate quantart
 | landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
 ## Quick Start
-1. To test the landscape-to-artwork style transfer performance, please download the [LandscapesHQ](https://disk.yandex.ru/d/Sz1gPiMoUregEQ) and [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) datasets and put them under `datasets/`. 
+Download the pre-trained [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) model and put it under `logs/`.
 
-2. Download the pre-trained [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) model and put it under `logs/`.  The folder structure should be:
+Run the following command:
+```
+bash test.sh
+```
+The results will be saved in `logs/`.
 
+## Testing
+To test the landscape-to-artwork style transfer performance, please download the [LandscapesHQ](https://disk.yandex.ru/d/Sz1gPiMoUregEQ) and [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) datasets and put them under `datasets/`. Follow above **Datasets and Pre-trained Models** to download more datasets and pretrained models. For example, run the following command to test photo-to-artwork style transfer model:
+```
+python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
+```
+
+* `--base`: path for the config file.
+* `-n`: result folder under `logs/`.
+* `-t`: is training.
+* `--gpus`: GPUs used.
+
+The folder structure should be
 ```
 QuantArt
 ├── configs
@@ -83,22 +99,6 @@ QuantArt
 └── test.sh
 ```
 
-3. Run the following command:
-```
-bash test.sh
-```
-The landscape-to-artwork style transfer results will be saved in `logs/`.
-
-## Testing
-Follow above **Datasets and Pre-trained Models** to download more datasets and pretrained models. For example, run the following command to test photo-to-artwork style transfer model:
-```
-python -u main.py --base logs/coco2art/configs/test.yaml -n coco2art -t False --gpus 0,
-```
-
-* `--base`: path for the config file.
-* `-n`: result folder under `logs/`.
-* `-t`: is training.
-* `--gpus`: GPUs used.
 
 ## Training
 **Stage-1:** Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
