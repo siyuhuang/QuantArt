@@ -128,7 +128,7 @@ python -u main.py --base configs/custom_paired.yaml -n custom_paired -t False --
 ```
 
 ## Resume Training
-To resume training from a checkpoint, specify ' --resume_from_checkpoint' with the checkpoint path. For instance,
+To resume training from a checkpoint, specify `--resume_from_checkpoint' with the checkpoint path. For instance,
 ```
 python -u main.py --base configs/coco2art.yaml -t True --gpus 0, --resume_from_checkpoint logs/coco2art/checkpoints/last.ckpt
 ```
