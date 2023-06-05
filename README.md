@@ -113,13 +113,13 @@ Two separate Stage-1 models are required for content and style datasets, respect
 python -u main.py --base configs/coco2art.yaml -t True --gpus 0,
 ```
 
-More training configs of Stage-2 models can be found in `configs/`.
-
 * `--base`: path for the config file.
 * `-n`: result folder under `logs/`.
 * `-t`: is training.
 * `--gpus`: GPUs used.
 * `--resume_from_checkpoint`: resume training from a checkpoint.
+
+More training configs of Stage-2 models can be found in `configs/`.
 
 ## Custom Dataset
 ### Unpaired data
