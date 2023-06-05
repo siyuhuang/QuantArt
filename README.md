@@ -120,12 +120,12 @@ python -u main.py --base configs/coco2art.yaml -t True --gpus 0,
 More training configs of Stage-2 models can be found in `configs/`.
 
 ## Custom Dataset
-**Unpaired data**
+**Unpaired data:**
 To test unpaired data, follow comments in `configs/custom_unpaired.yaml` to specify model checkpoints and data paths. Then run
 ```
 python -u main.py --base configs/custom_unpaired.yaml -n custom_unpaired -t False --gpus 0,
 ```
-**Paired data**
+**Paired data:**
 To test paired data, the corresponding content and style images (in two folders) should have the same file names. Follow comments in `configs/custom_paired.yaml` to specify model checkpoints and data paths, then run
 ```
 python -u main.py --base configs/custom_paired.yaml -n custom_paired -t False --gpus 0,
