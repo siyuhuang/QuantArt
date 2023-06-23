@@ -146,4 +146,4 @@ python -u main.py --base configs/custom_paired.yaml -n custom_paired -t False --
 This repository is heavily built upon the amazing [VQGAN](https://github.com/CompVis/taming-transformers).
 
 ## Contact
-If you have any questions, please do not hesitate to contact <huangsiyutc@gmail.com>.
+[Siyu Huang](http://siyuhuang.github.io/) (huangsiyutc@gmail.com).
