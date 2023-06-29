@@ -23,7 +23,7 @@ conda env create -f environment.yaml
 conda activate quantart
 ```
 
-## Quick Start
+## Quick Example
 Download the [pre-trained landscape2art model](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) and put it under `logs/`. Run
 ```
 bash test.sh
