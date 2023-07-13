@@ -54,7 +54,7 @@ Results will be saved in `logs/`.
 | landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
 ## Testing
-Follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. For instance for photo-to-artwork style transfer model, the folder structure should be
+Follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. For instance for landscape-to-artwork style transfer model, the folder structure should be
 ```
 QuantArt
 ├── configs
