@@ -99,7 +99,7 @@ python -u main.py --base logs/landscape2art/configs/test.yaml -n landscape2art -
 
 
 ## Training
-**Stage-1:** Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
+**Stage-1:** Please download preprocessed file lists [painter-by-numbers-train.txt](https://drive.google.com/file/d/12_sU31q8kDnOlAqJ_r3giCujumeY0_t-/view?usp=drive_link) and [painter-by-numbers-test.txt](https://drive.google.com/file/d/1rqEIuiL9ZFMjIdJXQBOsIP45ArZvHT3x/view?usp=drive_link), put them under `./datasets`. Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
 ```
 python -u main.py --base configs/vqgan_wikiart.yaml -t True --gpus 0,1,2,3
 ```
