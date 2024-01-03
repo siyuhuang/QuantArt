@@ -28,7 +28,7 @@ Download pre-trained [landscape2art model](https://drive.google.com/drive/folder
 ```
 bash test.sh
 ```
-The stylized images (from './imgs/') will be saved in `./logs/`.
+The stylized images (from `./imgs/`) will be saved in `./logs/`.
 
 ## Datasets and Pre-trained Models
 **Stage-1:** The datasets and pre-trained models for codebook pretraining are as follows:
