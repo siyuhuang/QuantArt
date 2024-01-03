@@ -23,12 +23,12 @@ conda env create -f environment.yaml
 conda activate quantart
 ```
 
-## Quick Example
+## Quick Example of Landscape Style Transfer
 Download pre-trained [landscape2art model](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) and put it under `logs/`. Run
 ```
 bash test.sh
 ```
-Results will be saved in `logs/`.
+The stylized images (from './imgs/') will be saved in `./logs/`.
 
 ## Datasets and Pre-trained Models
 **Stage-1:** The datasets and pre-trained models for codebook pretraining are as follows:
