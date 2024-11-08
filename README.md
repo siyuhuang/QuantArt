@@ -31,7 +31,7 @@ bash test.sh
 The stylized landscape images (from `imgs/`) will be saved in `logs/`.
 
 ## Datasets and Pre-trained Models
-**Sorry that the pretrained models of this repo are temporarily invalid due to an account issue in Google Drive. I will try to fix it when I have some free time.**
+<span style="color:red">Sorry that the pretrained models of this repo are temporarily invalid due to an account issue in Google Drive. I will try to fix it when I have some free time.</span>.
 
 **Stage-1:** The datasets and pre-trained models for codebook pretraining are as follows:
 
