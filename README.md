@@ -11,7 +11,7 @@ We devise a new style transfer framework called QuantArt for high visual-fidelit
  <img alt='Thumbnail' src='imgs/thumb.png'>
 </p>
 
-## 🔴Update 
+## 🔴Update (07/20/2025)
 I have fixed all the links to the pretrained models, but I cannot guarantee their weights are 100% correct. Feel free to report any issues!
 
 ## Dependencies
