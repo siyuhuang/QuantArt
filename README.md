@@ -24,7 +24,7 @@ conda activate quantart
 ```
 
 ## Quick Example of Landscape Style Transfer
-Download pre-trained [landscape2art model](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link) and put it under `logs/`. Run
+Download pre-trained [landscape2art model](https://drive.google.com/drive/folders/1uTNhiLRzERKEYHGTlAEWhTOUvJDD3ibt?usp=drive_link) and put it under `logs/`. Run
 ```
 bash test.sh
 ```
@@ -37,23 +37,23 @@ The stylized landscape images (from `imgs/`) will be saved in `logs/`.
 
 | Dataset | Pre-trained Model |
 | ---- | ---- |
-| [MS_COCO](https://cocodataset.org/#download) | [vqgan_imagenet_f16_1024.ckpt](https://drive.google.com/file/d/1lcrBplMVQTO6-ppxSWUyD_2coUiUpwoS/view?usp=share_link) |
-| [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [vqgan_wikiart_f16_1024.ckpt](https://drive.google.com/file/d/1xIYbaXLEdroYeftzM_1r5q2P9ANhQQpv/view?usp=share_link) |
-| [LandscapesHQ](https://github.com/universome/alis) | [vqgan_landscape_f16_1024.ckpt](https://drive.google.com/file/d/13VjJonTCJWz2QEIGX_KeO1RB3t15qTBE/view?usp=share_link) |
-| [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [vqgan_faceshq_f16_1024.ckpt](https://drive.google.com/file/d/1_6ZW8iVhFentkG_HTn5pMj4JRAiPUHwY/view?usp=share_link) |
-| [Metfaces](https://github.com/NVlabs/metfaces-dataset) | [vqgan_metfaces_f16_1024.ckpt](https://drive.google.com/file/d/1omGG6TmSVsksk39pGPkyLVTa-K4FcxQd/view?usp=share_link) |
+| [MS_COCO](https://cocodataset.org/#download) | [vqgan_imagenet_f16_1024.ckpt](https://drive.google.com/file/d/1TQRfO1InznRME2RlyKwzQRIb0xcalOiP/view?usp=drive_link) |
+| [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [vqgan_wikiart_f16_1024.ckpt](https://drive.google.com/file/d/1YXVNlQhKHEcFZFGg_2127OP09qnviCc-/view?usp=drive_link) |
+| [LandscapesHQ](https://github.com/universome/alis) | [vqgan_landscape_f16_1024.ckpt](https://drive.google.com/file/d/1yeWjTewg3sIU1LPBmSz-k3XMGYmqd9hI/view?usp=drive_link) |
+| [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [vqgan_faceshq_f16_1024.ckpt](https://drive.google.com/file/d/1yn6ZISlsJcQqwz3F44Mu1t29IGfGV6eg/view?usp=drive_link) |
+| [Metfaces](https://github.com/NVlabs/metfaces-dataset) | [vqgan_metfaces_f16_1024.ckpt](https://drive.google.com/file/d/1EEIjsFc1OdyzVUdX2rxw-IaotS3Tq2l7/view?usp=drive_link) |
 
 **Stage-2:** The datasets and pre-trained models for style transfer experiments are as follows:
 
 | Task | Pre-trained Model | Content | Style |
 | ---- | ---- | ---- | ---- |
-| photo->artwork| [coco2art](https://drive.google.com/drive/folders/13-z3eowPsPjKTIULP5sBrr_jgJn3w7ZH?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
-| landscape->artwork | [landscape2art](https://drive.google.com/drive/folders/1zuz9CmgpB7JsEx-Y5H0K0u3D95C6g4MU?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) |[WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
-| landscape->artwork (non-VQ) | [landscape2art_continuous](https://drive.google.com/drive/folders/1s-N62W8l_1iOvydsWvmJTWxNwWWJKTum?usp=share_link)| [LandscapesHQ](https://github.com/universome/alis) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |  
-| face->artwork | [face2art](https://drive.google.com/drive/folders/1wKWmmtLChtXTWFaaun097H7lYJ6-IWTe?usp=share_link) | [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [Metfaces](https://github.com/NVlabs/metfaces-dataset) |
-| artwork->artwork | [art2art](https://drive.google.com/drive/folders/1J48c21bN5f9anGBUSALcEMO0Bj8Emd0s?usp=share_link) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
-| photo->photo | [coco2coco](https://drive.google.com/drive/folders/1xc5P1woZJSoemcVvjnZ4Gj5Jyam7RsQZ?usp=share_link) | [MS_COCO](https://cocodataset.org/#download) | [MS_COCO](https://cocodataset.org/#download) |
-| landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1bmL25tOwuXt63wXwpNwlSW775sjrPhxL?usp=share_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
+| photo->artwork| [coco2art](https://drive.google.com/drive/folders/1s_3X7j8xIMIh8DjIg3-HPVp_zQSr6uxr?usp=drive_link) | [MS_COCO](https://cocodataset.org/#download) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
+| landscape->artwork | [landscape2art](https://drive.google.com/drive/folders/1uTNhiLRzERKEYHGTlAEWhTOUvJDD3ibt?usp=drive_link)| [LandscapesHQ](https://github.com/universome/alis) |[WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
+| landscape->artwork (non-VQ) | [landscape2art_continuous](https://drive.google.com/drive/folders/1zRLlaLWtucSg4hWbvGmCaj6OtAdWA_Xp?usp=drive_link)| [LandscapesHQ](https://github.com/universome/alis) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |  
+| face->artwork | [face2art](https://drive.google.com/drive/folders/11IQwT4XMrqKxozPnDf-pOSP3mHN1liKe?usp=drive_link) | [FFHQ](https://github.com/NVlabs/ffhq-dataset) | [Metfaces](https://github.com/NVlabs/metfaces-dataset) |
+| artwork->artwork | [art2art](https://drive.google.com/drive/folders/1bg7iGaodQ6R7JGlNTTFeV8QniF5OA0n_?usp=drive_link) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) | [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) |
+| photo->photo | [coco2coco](https://drive.google.com/drive/folders/1D1vfKsKVzB115_QmxWCqAwHQpGETQAlp?usp=drive_link) | [MS_COCO](https://cocodataset.org/#download) | [MS_COCO](https://cocodataset.org/#download) |
+| landscape->landscape | [landscape2landscape](https://drive.google.com/drive/folders/1JTfYu8Zr5oOYPA1RCbczcp66vBqT9rxV?usp=drive_link) | [LandscapesHQ](https://github.com/universome/alis) | [LandscapesHQ](https://github.com/universome/alis) |
 
 ## Testing
 Follow **Datasets and Pre-trained Models** to download more datasets and pretrained models. For instance for landscape-to-artwork style transfer model, the folder structure should be
@@ -101,7 +101,7 @@ python -u main.py --base logs/landscape2art/configs/test.yaml -n landscape2art -
 
 
 ## Training
-**Stage-1:** Prepare [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) dataset as above. Download file lists [painter-by-numbers-train.txt](https://drive.google.com/file/d/12_sU31q8kDnOlAqJ_r3giCujumeY0_t-/view?usp=drive_link) and [painter-by-numbers-test.txt](https://drive.google.com/file/d/1rqEIuiL9ZFMjIdJXQBOsIP45ArZvHT3x/view?usp=drive_link), put them under `datasets/`. Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
+**Stage-1:** Prepare [WikiArt](https://www.kaggle.com/competitions/painter-by-numbers/data) dataset as above. Download file lists [painter-by-numbers-train.txt](https://drive.google.com/file/d/1tNoLcX9q-Yty5PcpMNod1WXY208ZctHz/view?usp=drive_link) and [painter-by-numbers-test.txt](https://drive.google.com/file/d/19oi3x5bwiniZ-7FYyG4H26pve0kr9vpM/view?usp=drive_link), put them under `datasets/`. Run the following command to train a Stage-1 model (i.e., an autoencoder and a codebook). Four GPUs are recommended but not necessary.
 ```
 python -u main.py --base configs/vqgan_wikiart.yaml -t True --gpus 0,1,2,3
 ```
