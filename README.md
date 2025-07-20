@@ -11,6 +11,9 @@ We devise a new style transfer framework called QuantArt for high visual-fidelit
  <img alt='Thumbnail' src='imgs/thumb.png'>
 </p>
 
+## <span style="color:red;">Update</span>
+I have fixed all the links to the pretrained models, but I cannot guarantee they are 100% correct. Feel free to report any issues!
+
 ## Dependencies
 * python=3.8.5
 * pytorch=1.7.0
@@ -31,7 +34,6 @@ bash test.sh
 The stylized landscape images (from `imgs/`) will be saved in `logs/`.
 
 ## Datasets and Pre-trained Models
-***The pretrained models of this repo are temporarily unavailable due to an account issue in Google Drive. I will try to fix it when I have some free time.***
 
 **Stage-1:** The datasets and pre-trained models for codebook pretraining are as follows:
 
