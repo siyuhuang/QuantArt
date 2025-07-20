@@ -12,7 +12,7 @@ We devise a new style transfer framework called QuantArt for high visual-fidelit
 </p>
 
 ## 🔴Update 
-I have fixed all the links to the pretrained models, but I cannot guarantee they are 100% correct. Feel free to report any issues!
+I have fixed all the links to the pretrained models, but I cannot guarantee their weights are 100% correct. Feel free to report any issues!
 
 ## Dependencies
 * python=3.8.5
